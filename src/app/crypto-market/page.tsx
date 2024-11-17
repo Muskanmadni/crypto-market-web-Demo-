@@ -1,19 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-
 export default function CoinMarket(){
   const API_KEY = "606d2aab1227a2411ab189bcdd97f986";
-  interface CoinData{
-    rates:{
-      BTC:string;
-      SOL:string;
-      ETH:string;
-      DOGE:string;
-      USDT:string;
-      XRP:string;
-    }
-  }
-  const [data, setData] = useState<CoinData | null>(null);
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     fetch(`http://api.coinlayer.com/live?access_key=${API_KEY}`)
