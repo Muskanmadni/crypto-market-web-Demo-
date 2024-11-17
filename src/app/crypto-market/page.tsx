@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 export default function CoinMarket(){
   const API_KEY = "606d2aab1227a2411ab189bcdd97f986";
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>();
 
   useEffect(() => {
     fetch(`http://api.coinlayer.com/live?access_key=${API_KEY}`)
